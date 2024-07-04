@@ -1,4 +1,4 @@
-# 在Django上實現會員註冊登入系統(The implementation of member registration and login on Django)
+# 在Django上實現會員註冊登入系統(The implementation of member registration and login on Django)☺️
 
 這是一個使用 Django 框架開發的會員註冊與登入的作品，包含前端設計與資料庫，以下稱本作品。
 
@@ -63,7 +63,7 @@ python manage.py runserver
 
 - 會員註冊：用戶可以在註冊頁面創建新帳號。
 - 會員登入：已註冊用戶可以使用帳號和密碼登入系統。
-- 會員資料管理：登入後可以查看和管理個人資料，詳細使用方式請參考[此處](CreateDjangoSuperuser)。
+- 會員資料管理：登入後可以查看和管理個人資料，詳細使用方式請參考[此處](CreateDjangoSuperuser.md)。
 
 ## 貢獻
 
