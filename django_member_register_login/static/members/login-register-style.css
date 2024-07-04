@@ -1,0 +1,85 @@
+body{
+    background-image: url('image.jpg');
+    background-size: cover; /* 使圖片以最佳方式填充整個背景 */
+    background-repeat: no-repeat;   /* 防止圖片重複 */
+}
+
+.container{
+    display: flex;  /* 讓表單內容水平排列顯示 */
+    justify-content: center;    /* 將內容水平居中對齊 */
+    align-items: center;    /* 將內容垂直居中對齊 */
+    height: 100vh;  /* 設定容器的高度為整個視窗的高度，vh表示視窗的高度的百分比，即"Viewport Height"的縮寫。具體來說，1vh 等於視窗高度的百分之一，而 100vh 就是整個視窗的高度 */
+}
+
+.form-container{
+    background-color: #9c8d6bd4;
+    border-radius: 10px;    /* 將所有四個角都設置為 10px 的圓角 */
+    padding: 30px;  /* 兩表單中間間隔20 像素 */
+    /* 0 水平偏移量：陰影在水平方向上沒有偏移 */
+    /* 0 垂直偏移量：陰影在垂直方向上也沒有偏移 */
+    /* 10px 模糊程度：陰影的模糊範圍，陰影邊緣會以 10 像素的範圍逐漸變淡 */
+    /* rgba(0, 0, 0, 0.1) 顏色：RGB 值為 (0, 0, 0) 表示顏色為黑色，A（alpha）值為 0.1 表示 10% 的不透明度，幾乎是透明的黑色 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 500px;
+}
+
+.form-container:hover{  /* 滑鼠停在表單上的樣式設定*/
+    background-color: #9c8d6bf6;
+}
+
+h2{
+    text-align: center; /* 將標題文字居中對齊 */
+    color: rgb(3, 3, 49);
+    font-size: 28px;
+}
+
+form{
+    display: flex;
+    flex-direction: column; /* 將表單內容垂直排列 */
+    align-items: center;
+    padding-top: 40px;  /* 設定上內邊距，增加表單內容與容器之間的距離 */
+    padding-bottom: 20px;   /* 設定下內邊距，增加表單內容與容器之間的距離 */
+}
+
+input[type="text"], input[type="password"]{ /* 設定文字輸入框的樣式。 */
+    margin: 5px 0;  /* 上下的外邊距設置為 5px，左右的外邊距設置為 0 */
+    padding: 12px;   /* 內邊距拉大 8px*/
+    border: 2px solid #ccc; /* 設定邊框 大小:2像素 邊框為實線 */
+    border-radius: 5px; 
+    width: 70%;
+    margin-bottom: 30px;    /* 設置元素的底部外邊距（margin）。這個屬性指定了元素與其下方元素之間的空間大小。 */
+    font-size: 18px;
+}
+
+button{
+    color: rgb(3, 3, 49);
+    padding: 10px;
+    width: 85%;
+    font-weight: bold;  /* 設定字體粗細 */
+    border: none;
+    background-color: #dac290;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; /* 這個元素將被會在網頁上佔據一整行，並且預設情況下會在前後都換行，不與其他元素並排顯示。 */
+    margin: 0 auto; /* 0：表示在元素的上方和下方都沒有外邊距 ; auto：表示在左右兩側的外邊距上自動分配相等的空間 */
+    text-align: center;
+    font-size: 18px;
+}
+
+button:hover{   /* 滑鼠停在按鈕上的樣式設定*/
+    background-color: #bda470;
+}
+
+#loginAdmin{
+    color: rgb(3, 3, 49);
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#loginAdmin:hover{
+    color: rgb(31, 31, 95);
+}
