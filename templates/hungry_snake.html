@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>🐍🍎🐍🍎</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'members/game.css' %}?v=1.1"/>
+    </head>
+    <body>
+        <div>
+            <p class="user">目前登入的使用者：{{ username }}</p>
+        </div>
+        <h1>🍎🐍 貪食蛇(Hungry Snake) 🍎🐍</h1>
+        <p class="hint_a">開聲音遊玩體驗更佳🔊</p>
+        <iframe src="http://127.0.0.1:5002/start_game"></iframe>
+        <div class="button-container">
+            <button class="back_to_login" type="button" onclick="location.href='/game_selection'">回上一頁(Back previous page)</button>
+            <button class="play_again" type="button" onclick="location.href='/hungry_snake'">再玩一次(Play again)</button>
+        </div>
+     </body>
+</html>

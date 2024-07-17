@@ -9,13 +9,11 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
-from pathlib import Path    # pathlib 模組提供了一個面向物件的介面，用於處理文件系統路徑 ; 從 pathlib 模組中導入了 Path 類別，它用於處理文件路徑的操作
 import os   # os 模組是 Python 的內置模組，用於與操作系統進行交互
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # 獲取到 Django 項目的根目錄路徑，並將其賦值給變數 BASE_DIR
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -27,7 +25,7 @@ SECRET_KEY = 'django-insecure-9$$3&6(jk)m8#5ec29yn($x=#%8ek2t_a5zzt3v2(!8538gu4*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 # Application definition
 # 在 INSTALLED_APPS 中添加你的應用程序
@@ -79,10 +77,21 @@ WSGI_APPLICATION = 'mydj.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mssql',
+        'NAME': 'djangoDEMO',
+        'USER': 'admin1',
+        'PASSWORD': 'Asdfg887000',
+        'HOST': 'localhost',
+        'PORT': '1433',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 18 for SQL Server',
+            'extra_params': 'TrustServerCertificate=yes;'
+        },
     }
 }
+
+# 使用資料庫存儲 session
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 
 
 # Password validation
@@ -118,11 +127,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 # 用於設置靜態文件的 URL 前綴。靜態文件包括 CSS、JavaScript、圖片等文件
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # 添加靜態文件目錄的路徑，Django 將在這些目錄中查找靜態文件
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, "static"),
 ]
 
 # Default primary key field type

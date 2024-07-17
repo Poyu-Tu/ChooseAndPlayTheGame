@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", function() {
         var password1 = document.getElementById("register-password1").value;
         var password2 = document.getElementById("register-password2").value;
 
+        if (username.length < 3 || password1.length < 8){
+            alert("帳號需大於 3 碼，密碼需大於 8 碼 !")
+            resetRegisterForm();
+            return;
+        }
+
         if(password1 != password2){
             alert("兩次輸入的密碼不相符，請再次確認!");
             document.getElementById("register-password1").value = "";

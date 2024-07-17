@@ -5,25 +5,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta charset="utf-8"/>
         <title>註冊會員</title>
-        <link rel="stylesheet" type="text/css" href="{% static 'members/login-register-style.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'members/login-register-style.css' %}?v=1.1"/>
     </head>
 
     <body>
         <div class="container">
-            <div class="form-container">
-                <h2>註冊會員</h2>
+            <div id="register-form-container" class="form-container">
+                <h2 id="register-h2">"註冊會員"</h2>
                 <!-- 建立會員註冊表單 -->
-                <form id="register-form">
+                <form id="register-form" method="post">
                     {% csrf_token %}
-                    <input id="register-username" type="text" placeholder="請輸入欲註冊帳號" required autocomplete="username"/>
-                    <input id="register-password1" type="password" placeholder="請輸入密碼" required autocomplete="new-password"/>
+                    <input id="register-username" type="text" placeholder="請輸入註冊帳號(至少3碼)" required autocomplete="username"/>
+                    <input id="register-password1" type="password" placeholder="請輸入密碼(至少8碼)" required autocomplete="new-password"/>
                     <input id="register-password2" type="password" placeholder="請再次輸入密碼" required autocomplete="new-password"/>
                     <button type="submit">註冊</button>
                 </form>
             </div>
         </div>
 
-        <script src="{% static 'members/register.js' %}"></script>
+        <script src="{% static 'members/register.js' %}?v=1.1"></script>
 
     </body>
 </html>

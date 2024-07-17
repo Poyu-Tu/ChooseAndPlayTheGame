@@ -1,5 +1,24 @@
-//這個事件確保了 JavaScript 代碼在 HTML 文件完全載入後才執行，這樣可以避免在 DOM 還沒完全載入時就先執行 JavaScript 代碼造成的問題。
-document.addEventListener("DOMContentLoaded", function() {
+// 等待整個HTML文件（DOM）完全加載並準備就緒後，再執行內部的JavaScript程式碼。
+// $(document).ready 是jQuery提供的一個方法，確保網頁內容在完全加載後再執行我們的程式碼。
+$(document).ready(function() {
+    // 使用Bootstrap的模態框（modal）方法，將ID為welcomeModal的模態框顯示出來。
+    // $('#welcomeModal') 是一個jQuery選擇器，用來選擇ID為welcomeModal的元素。
+    // .modal('show') 則是Bootstrap模態框的方法，用來顯示該模態框。
+    $('#welcomeModal').modal('show');
+
+    // 為整個文檔（document）綁定一個點擊事件。當用戶在網頁的任意位置點擊時，這個事件處理器將會被觸發。
+    // function(event) 是事件處理函數，event 參數包含了關於點擊事件的所有訊息。
+    $(document).click(function(event) {
+        // 檢查點擊事件的目標（即用戶點擊的元素）是否沒有在模態框內。
+        // $(event.target) 選擇被點擊的元素。
+        // .closest('.modal-content') 方法從點擊的元素開始向上查找，直到找到包含該元素的 .modal-content
+        // .length 用來檢查是否找到這樣的元素。如果長度為0，則說明點擊不在模態框內。
+        if (!$(event.target).closest('.modal-content').length) {
+            // .modal('show') 則是Bootstrap模態框的方法，用來隱藏該模態框。
+            $('#welcomeModal').modal('hide');
+        }
+    });
+    
     // 獲取 CSRF token，getCookie 函數從瀏覽器的 cookie 中獲取 CSRF 令牌
     var csrftoken = getCookie('csrftoken');
 
@@ -57,14 +76,6 @@ document.addEventListener("DOMContentLoaded", function() {
     */
     document.getElementById("go-to-register").addEventListener("click", function() {
         window.location.href = "/register/";
-    });
-
-
-    /*
-        將用戶跳轉到 Django 的 admin 登入頁面
-    */
-    document.getElementById("loginAdmin").addEventListener("click", function() {
-        window.location.href = "http://127.0.0.1:8000/admin/login/?next=/admin/";
     });
 
 
