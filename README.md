@@ -22,7 +22,7 @@
 
 ```bash
 # 獲取本作品所有檔案
-git clone https://github.com/Poyu-Tu/The-implementation-of-member-registration-and-login-on-Django.git
+git clone https://github.com/Poyu-Tu/ChooseAndPlayTheGame.git
 ```
 ```bash
 # 進入本作品目錄
