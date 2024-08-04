@@ -41,9 +41,15 @@
                 <form id="login-form" method="post">    <!-- method屬性為post表示使用POST方法提交表單 -->
                     {% csrf_token %}    <!-- Django模板標籤，用於生成一個CSRF令牌，以防止跨站請求偽造 -->
                     <!-- text >> 文字輸入框 ; placeholder >> 輸入框中的提示字詞，用戶輸入後將覆蓋 ; required >> 必填欄位，未填將會跳出提示-->
+<<<<<<< HEAD
                     <input id="login-username" type="text" name="username" placeholder="請輸入帳號" required/>
                     <!-- password >> 密碼輸入框，用戶輸入會自動遮蔽密碼 -->
                     <input id="login-password" type="password" name="password" placeholder="請輸入密碼" required/>
+=======
+                    <input id="login-username" type="text" placeholder="請輸入帳號" required/>
+                    <!-- password >> 密碼輸入框，用戶輸入會自動遮蔽密碼 -->
+                    <input id="login-password" type="password" placeholder="請輸入密碼" required/>
+>>>>>>> 9ff86a6b41eab11186d80dd96ef774507cfca273
                     <!-- submit >> 提交表單數據 -->
                     <button type="submit">登入</button>
                 </form>

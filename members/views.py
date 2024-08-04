@@ -59,7 +59,6 @@ def login(request):
             return JsonResponse({'success': False, 'message': '帳號尚未註冊！'})
     return render(request, 'member-login-register.html')
 
-
 def game_selection(request):
     username = request.session.get('username', 'Guest')  # 從 session 中獲取用戶名
     return render(request, 'game_selection.html', {'username': username})
