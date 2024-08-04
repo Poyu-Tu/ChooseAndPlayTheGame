@@ -1,0 +1,59 @@
+/* 設置全局字體和背景色 */
+body {
+    font-family: Arial, sans-serif; /* 設置全局字體為 Arial 或 sans-serif 字體 */
+    background-color: #1e1e1e; /* 設置背景色為深灰色 */
+    color: #f0f0f0; /* 設置文字顏色為淺灰色 */
+    margin: 0; /* 移除默認的邊距 */
+    padding: 0; /* 移除默認的內邊距 */
+    line-height: 1.6; /* 設置行高以便於閱讀 */
+    text-align: center; /* 設置全局文字居中 */
+}
+
+/* 頁面標題樣式 */
+h1 {
+    font-size: 2.5em; /* 設置字體大小為 2.5 倍標準字體大小 */
+    font-weight: bold; /* 設置字體粗細為粗體 */
+    color: #00adb5; /* 設置標題顏色為亮藍色 */
+    margin-top: 20px; /* 設置標題頂部的外邊距為 20px */
+    margin-bottom: 20px; /* 設置標題底部的外邊距為 20px */
+}
+
+/* user 樣式 */
+.user {
+    font-size: 0.9em; /* 縮小字體 */
+    color: #f0f0f0; /* 字體顏色設置為淺灰色 */
+    margin-bottom: 10px; /* 設置底部外邊距 */
+}
+
+.hint_a {
+    font-style: italic; /* 斜體 */
+    font-size: 0.8em; /* 縮小字體 */
+    color: #a0a0a0; /* 字體顏色設置為稍淺的灰色 */
+    text-align: center; /* 設置內容居中 */
+}
+
+/* 隱藏 iframe 樣式 */
+iframe {
+    display: none; /* 隱藏 iframe */
+}
+
+/* button 樣式 */
+.button-container {
+    text-align: center; /* 設置按鈕容器居中 */
+}
+
+button {
+    background-color: #00adb5; /* 設置按鈕背景色為亮藍色 */
+    color: white; /* 設置按鈕文字顏色為白色 */
+    padding: 10px 20px; /* 設置按鈕內邊距 */
+    margin: 10px 5px; /* 設置按鈕外邊距 */
+    border: none; /* 移除按鈕邊框 */
+    cursor: pointer; /* 設置按鈕鼠標樣式為手型 */
+    font-size: 1em; /* 設置按鈕字體大小 */
+    border-radius: 20px; /* 設置按鈕的圓角 */
+    display: inline-block; /* 設置按鈕為行內塊元素 */
+}
+
+button:hover {
+    background-color: #007a7b; /* 設置按鈕懸停時的背景色 */
+}

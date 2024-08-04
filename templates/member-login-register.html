@@ -1,0 +1,60 @@
+{% load static %}   <!-- Django模板中的一個指令，用於載入靜態文件，例如CSS和JavaScript文件 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <title>CHOOSE and PLAY THE GAME 🔅</title>
+        <!-- % static %則是Django模板中的一個指令，用於將靜態文件的路徑轉換成對應的URL -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css?v=1.1">
+        <link rel="stylesheet" type="text/css" href="{% static 'members/login-register-style.css' %}?v=1.1"/>
+    </head>
+
+    <body>
+        <!-- Bootstrap 彈出框 -->
+        <div class="modal" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="welcomeModalLabel">"Choose and Play The Game !"</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>嗨~ 這裡是提供使用者選擇並開始遊戲的平台👋</p>
+                        <p>你可以在這裡休閒放鬆的遊玩遊戲，無須下載。</p>
+                        <p>現在開始註冊並登入來體驗吧！</p>
+                        <br/>
+                        <p class="modal-detail">目前開放的遊戲：Hit Bricks🧱, Hungry Snake🐍</p>
+                        <p class="modal-detail">更多遊戲緩慢持續推出中......</p>
+                    </div>
+                    <div class="modal-footer">
+                        <p class="clickAnyWhere">點擊框框外關閉此提醒</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 會員登入頁面 -->
+        <div class="container">
+            <div id="login-form-container" class="form-container">
+                <h2 id="login-h2">"會員登入"</h2>
+                <!-- 建立會員登入表單 -->
+                <form id="login-form" method="post">    <!-- method屬性為post表示使用POST方法提交表單 -->
+                    {% csrf_token %}    <!-- Django模板標籤，用於生成一個CSRF令牌，以防止跨站請求偽造 -->
+                    <!-- text >> 文字輸入框 ; placeholder >> 輸入框中的提示字詞，用戶輸入後將覆蓋 ; required >> 必填欄位，未填將會跳出提示-->
+                    <input id="login-username" type="text" name="username" placeholder="請輸入帳號" required/>
+                    <!-- password >> 密碼輸入框，用戶輸入會自動遮蔽密碼 -->
+                    <input id="login-password" type="password" name="password" placeholder="請輸入密碼" required/>
+                    <!-- submit >> 提交表單數據 -->
+                    <button type="submit">登入</button>
+                </form>
+                <!-- 添加一個導向註冊頁面的按鈕 -->
+                <button id="go-to-register" type="button">註冊新會員</button>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js?v=1.1"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js?v=1.1"></script>
+        <script src="{% static 'members/login.js' %}?v=1.1"></script>
+
+    </body>
+</html>

@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>遊戲清單</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'members/game_selection.css' %}?v=1.1"/>
+    </head>
+    <body>
+        <div class="header_container">
+            <p class="user">目前登入的使用者：{{ username }}</p>
+            <h1>選擇遊戲(Select games)👇</h1>
+        </div>
+
+        <div class="hb_container active">
+            <div class="gamename">
+                <li><a href="/hit_bricks">打磚塊(Hit Bricks) 🧱</a></li>
+                <p class="hint_a">點擊遊戲名稱即可開始遊戲!</p>
+            </div>
+
+            <ul>
+                <div>
+                    <p class="description">
+                        遊戲說明：
+                        <ol>
+                            打磚塊是一個經典的街機遊戲，目的是用球擊碎所有磚塊。移動你的板子來反彈球，避免它掉到地板上。
+                        </ol>
+                    </p>
+                </div>
+                <div>
+                    <p class="description">
+                        操作說明：
+                        <ol>
+                            <li>使用<span>滑鼠點擊左鍵發球</span>開始遊戲，<span>左右移動滑鼠</span>來控制板子接球。</li>
+                            <li>玩家有<span>三條命</span>，全數耗盡遊戲會結束並告知本次遊戲分數。</li>
+                            <li>打掉磚塊的得分會隨著時間越長而減少。</li>
+                            <li>生命越多，遊戲結算時會有意想不到的驚喜!</li>
+                            <li>中途想離開可以按下X，或是ESC鍵。</li>
+                        </ol>
+                    </p>
+                </div>
+            </ul>
+        </div>
+
+        <div class="hs_container">
+            <div class="gamename">
+                <li><a href="/hungry_snake">貪食蛇(Hungry Snake) 🐍</a></li>
+                <p class="hint_a">點擊遊戲名稱即可開始遊戲!</p>
+            </div>
+
+            <ul>
+                <div>
+                    <p class="description">
+                        遊戲說明：
+                        <ol>
+                            貪食蛇是一個經典的街機遊戲，控制蛇吃到食物來增長身體。注意不要撞到牆壁或自己的身體。
+                        </ol>
+                    </p>
+                </div>
+                <div>
+                    <p class="description">
+                        操作說明：
+                        <ol>
+                            <li><span>使用鍵盤「i、k、j、l」</span>分別控制蛇的<span>上下左右</span>移動。</li>
+                            <li>每吃掉一顆果實，蛇的身體會長大，蛇<span>越大隻額外獎勵越高</span>，但要注意不要咬到自己了。</li>
+                            <li>果實會在地圖上無限的生成，<span>吃越多分數會越高</span>，請盡可能地吃多一點吧!</li>
+                            <li>地圖上偶爾會出現<span>金光閃閃的果實</span>，因營養豐富且稀有，蛇<span>會長的比較大，得分較高</span>~</li>
+                            <li>若輸入法為中文或英文大寫，需切換成小寫英文即可正常操作移動。</li>
+                            <li>中途想離開可以按下X，或是ESC鍵。</li>
+                        </ol>
+                    </p>
+                </div>
+            </ul>
+        </div>
+
+        <div class="button-container">
+            <button class="back_to_login" type="button" onclick="location.href='/login'">回登入頁(Back to login page)</button>
+            <button id="toggleButton" class="toggle">切換遊戲(Change game)</button>
+        </div>
+        
+        <script src="{% static 'members/game_selection.js' %}?v=1.1"></script>
+    </body>
+</html>

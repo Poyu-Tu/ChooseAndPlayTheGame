@@ -1,0 +1,118 @@
+/* 設置全局字體和背景色 */
+body {
+    font-family: Arial, sans-serif; /* 設置全局字體為 Arial 或 sans-serif 字體 */
+    background-color: #1e1e1e; /* 設置背景色為深灰色 */
+    color: #f0f0f0; /* 設置文字顏色為淺灰色 */
+    margin: 0; /* 移除默認的邊距 */
+    padding: 0; /* 移除默認的內邊距 */
+    line-height: 1.6; /* 設置行高以便於閱讀 */
+    text-align: center; /* 設置全局文字居中 */
+}
+
+/* 頁面標題樣式 */
+h1 {
+    font-size: 2.5em; /* 設置字體大小為 2.5 倍標準字體大小 */
+    font-weight: bold; /* 設置字體粗細為粗體 */
+    color: #00adb5; /* 設置標題顏色為亮藍色 */
+    margin-top: 20px; /* 設置標題頂部的外邊距為 20px */
+    margin-bottom: 20px; /* 設置標題底部的外邊距為 20px */
+}
+
+/* header_container 樣式 */
+.header_container {
+    margin-top: 10px; /* 設置頂部外邊距 */
+}
+
+/* user 樣式 */
+.user {
+    font-size: 0.9em; /* 縮小字體 */
+    color: #f0f0f0; /* 字體顏色設置為淺灰色 */
+    margin-bottom: 10px; /* 設置底部外邊距 */
+}
+
+/* gamename 樣式 */
+.gamename {
+    margin: 10px 0; /* 設置上下外邊距 */
+}
+
+/* hint_a 樣式 */
+.hint_a {
+    font-size: 0.8em; /* 縮小字體 */
+    color: #a0a0a0; /* 字體顏色設置為稍淺的灰色 */
+    text-align: center; /* 設置內容居中 */
+}
+
+/* description 樣式 */
+.description {
+    font-style: italic;
+}
+
+/* container 樣式 */
+.hb_container, .hs_container {
+    display: none; /* 預設隱藏 */
+    padding: 20px; /* 設置內容區域的內邊距 */
+    margin: 20px auto; /* 設置內容區域的外邊距並居中 */
+    background-color: #333; /* 設置內容區域的背景色為深灰色 */
+    border-radius: 10px; /* 設置內容區域的圓角 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 設置內容區域的陰影 */
+    transition: opacity 0.5s ease-in-out; /* 添加過渡效果 */
+    opacity: 0; /* 設置初始透明度 */
+    max-width: 600px; /* 設置最大寬度 */
+    text-align: center; /* 設置文字居中 */
+}
+
+/* 顯示當前顯示的容器 */
+.hb_container.active, .hs_container.active {
+    display: block; /* 設置顯示 */
+    opacity: 1; /* 設置顯示時的透明度 */
+}
+
+/* a 樣式 */
+a {
+    color: #00adb5; /* 設置鏈接字體顏色為亮藍色 */
+    text-decoration: none; /* 移除鏈接的下劃線 */
+    font-size: larger;
+}
+
+a:hover {
+    color: #ffffff; /* 設置鏈接懸停時的字體顏色為白色 */
+}
+
+/* ol 樣式 */
+ol {
+    font-size: 14px;
+}
+
+/* ul 樣式 */
+ul {
+    list-style-type: none; /* 移除列表樣式 */
+    padding: 0; /* 移除內邊距 */
+    text-align: left; /* 設置文字靠左 */
+}
+
+/* span 樣式 */
+span {
+    font-weight: bold; /* 設置粗體 */
+    color: #00adb5; /* 設置字體顏色為亮藍色 */
+}
+
+/* button 樣式 */
+.button-container {
+    text-align: center; /* 設置按鈕容器居中 */
+}
+
+button {
+    background-color: #00adb5; /* 設置按鈕背景色為亮藍色 */
+    color: white; /* 設置按鈕文字顏色為白色 */
+    padding: 10px 20px; /* 設置按鈕內邊距 */
+    margin: 10px 5px; /* 設置按鈕外邊距 */
+    border: none; /* 移除按鈕邊框 */
+    cursor: pointer; /* 設置按鈕鼠標樣式為手型 */
+    font-size: 1em; /* 設置按鈕字體大小 */
+    border-radius: 20px; /* 設置按鈕的圓角 */
+    display: inline-block; /* 設置按鈕為行內塊元素 */
+}
+
+button:hover {
+    background-color: #007a7b; /* 設置按鈕懸停時的背景色 */
+}
