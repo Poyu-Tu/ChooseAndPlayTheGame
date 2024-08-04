@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect # render 函式用於渲染模板�
 from django.http import JsonResponse    # 返回 JSON 格式的響應
 from .models import Member  # 導入了 Member 模型，用於操作會員數據
 from django.views.decorators.csrf import csrf_exempt    # 為了免於CSRF驗證
-from django.contrib.auth.decorators import login_required  # 用於檢查用戶是否已登入
 import json # 用於處理 JSON 數據
 import subprocess
 import os
